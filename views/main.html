@@ -1,3 +1,4 @@
+<div>
 <div class="header">
   <h3 class="text-muted">chatty</h3>
 </div>
@@ -9,6 +10,7 @@
 		<input ng-model="newMessage" type="text" placeholder="Hello!">
 	</form>
 
-	<div ng-repeat="message in messages track by $index">{{ message }}</div>
+	<div ng-repeat="message in messages track by $index"><span>{{ message.message }}</span>&nbsp;&nbsp;&nbsp;<span>{{ message.timestamp | date: 'medium' }}</span></div>
 
+</div>
 </div>
